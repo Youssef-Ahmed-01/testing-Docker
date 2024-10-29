@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>first porject</title>
+</head>
+<body>
+    <h1>Store Name and Number</h1>
+    <form method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="number">Number:</label>
+        <input type="text" id="number" name="number" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <h2>Search by Name</h2>
+    <form action="/search" method="get">
+        <label for="search_name">Name:</label>
+        <input type="text" id="search_name" name="search_name" required><br><br>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if search_result %}
+        <p>Number for {{ search_name }}: {{ search_result }}</p>
+    {% elif search_name %}
+        <p>No results found for "{{ search_name }}"</p>
+    {% endif %}
+</body>
+</html>
