@@ -19,7 +19,7 @@ This project is a simple Flask web application that is containerized using Docke
 5. **then run using VScode or temrinal**  
     ```terminal/bash
     docker run -it --name <Container-name> youssefahmed01/alpask:v1.1
-6. **go to browser to add data or search for data to/from dbfile**  
+6. **now you have the app on the contaner.run comtainer and go to browser to add data or search for data to/from dbfile**  
     http://127.17.0.1:5000
     or
     http://localhost:5000
